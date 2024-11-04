@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   .ft_print_reverse_alphabet.c                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: p97arruda <pliniodev97@gmail.com>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/31 14:17:39 by p97arruda         #+#    #+#             */
-/*   Updated: 2024/10/31 15:42:41 by p97arruda        ###   ########.fr       */
+/*   Created: 2024/11/04 17:19:24 by p97arruda         #+#    #+#             */
+/*   Updated: 2024/11/04 17:19:25 by p97arruda        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_print_reverse_alphabet(void)
 {
-	write (1, &c, 1);
+	char	letter;
+
+	letter = 'z';
+	while (letter >= 'a')
+	{
+		write (1, &letter, 1);
+		letter--;
+	}
 }
 /*
+#include <unistd.h>
+
 int	main(void)
 {
-	ft_putchar('A');
-	ft_putchar('\n');
-	return 0;
+	ft_print_reverse_alphabet();
+	write(1, "\n", 1);
+	return (0);
 }
 */
